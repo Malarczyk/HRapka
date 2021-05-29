@@ -6,7 +6,7 @@
 .login-panel {
     background-color: white;
     box-shadow: $medium-shadow;
-    height: 50%;
+    min-height: 50%;
     width: 30vw;
     position: absolute;
     top: 50%;
@@ -14,9 +14,16 @@
     transform: translate(-50%, -50%);
     border-radius: $small-radius;
 
-    padding: 0 5%;
+    padding: 10px 5% 30px 5%;
 
-    &__logo {}
+    @media (max-width: 1024px) {
+        width: 60vw
+    }
+
+    &__logo {
+        text-align: center;
+        padding: 15px 0;
+    }
 
     &__body {}
 
@@ -25,7 +32,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 3% 0;
+            padding: 6% 0;
 
             .hr {
                 flex-basis: 40%;
@@ -46,18 +53,32 @@
             }
 
         }
+
+        text-align: center;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            padding-bottom: 15px;
+        }
     }
 }
 
 .login-form {
     input {
         outline: 0;
-        background: #f2f2f2;
+        background: #f1f1f1;
         width: 100%;
-        border: 1px solid #dadada;
+        border: 1px solid #dddddd;
         margin: 0 0 15px;
         padding: 15px;
         box-sizing: border-box;
         font-size: 14px;
+    }
+
+    button {
+        i {
+            padding-left: 10px;
+        }
     }
 }
