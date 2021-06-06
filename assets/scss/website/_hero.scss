@@ -1,0 +1,60 @@
+.header {
+    height: 85vh;
+    background-image: url('../img/bg-hero.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+    }
+
+    &__title {
+        h1 {
+            font-size: 7rem;
+            font-family: $handwrite-font;
+        }
+
+        h2 {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        padding-bottom: 40px;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: start;
+
+        &__left {
+            flex-basis: 20%;
+        }
+
+        &__right {
+            flex-basis: 50%;
+        }
+
+        li {
+            padding: 10px 0;
+            font-size: 20px;
+
+            i {
+                padding-right: 8px;
+            }
+        }
+    }
+
+    .divider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 141px;
+        width: 100%;
+    }
+}
